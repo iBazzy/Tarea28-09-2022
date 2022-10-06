@@ -1,0 +1,13 @@
+
+<ion-list>
+  <ion-card *ngIf="pokemon" [routerLink]="['',pokemon.name]">
+    <ion-label >
+      <center><h2>{{ pokemon.name | uppercase }}</h2></center>
+      <center><p>Nº{{ pokemon.order}}</p></center>
+    </ion-label>
+    <center><img [src]="pokemon.sprites.front_default"></center>
+  </ion-card>
+  <hr>
+</ion-list>
+
+
