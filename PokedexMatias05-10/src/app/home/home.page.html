@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-title>
+      Pokedex
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let poke of pokemon;" [routerLink]="poke.pokeIndex">
+      <img [src]="poke.image" >
+      <ion-label >
+        <center><h2>{{ poke.name  |uppercase }}</h2></center>
+        <center><p>Order:{{ poke.pokeIndex }}</p></center>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
